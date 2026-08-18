@@ -1,0 +1,52 @@
+{
+  "name": "Spotify Email Checker API",
+  "brand": "CheckNumber",
+  "slug": "spotify-email-checker-api",
+  "repository": "checkernumber/spotify-email-checker-api",
+  "description": "Asynchronous file-based Spotify checks.",
+  "official_site": "https://checknumber.ai",
+  "landing_page": "https://checknumber.ai/products/spotify",
+  "canonical_docs": "https://docs.checknumber.ai/spotify-email-checker",
+  "dashboard": "https://platform.checknumber.ai",
+  "base_url": "https://api.checknumber.ai",
+  "mode": "async",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "endpoints": {
+    "create_task": {
+      "method": "POST",
+      "path": "/v1/tasks"
+    },
+    "get_task": {
+      "method": "POST",
+      "path": "/v1/gettasks"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
+  },
+  "input": {
+    "file_format": "text file, one valid email address per line according to task type"
+  },
+  "products": [
+    {
+      "task_type": "spotify_email",
+      "name": "Email Checker",
+      "doc_slug": "spotify-email-checker",
+      "input_kind": "email",
+      "min_numbers": 1000,
+      "max_numbers": 10000000,
+      "result_fields": [
+        "email",
+        "activated"
+      ]
+    }
+  ],
+  "pricing_url": "https://checknumber.ai/pricing",
+  "maintainer": "CheckNumber",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
+}
